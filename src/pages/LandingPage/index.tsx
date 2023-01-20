@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 import Button from 'react-bootstrap/Button';
@@ -7,10 +7,11 @@ import Col from 'react-bootstrap/Col';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Row from 'react-bootstrap/Row';
 
-import PanamaPark from '../images/panama-park.jpg';
-import Donate from '../images/donate.png';
-import Vote from '../images/vote.png';
-import Park from '../images/park.png';
+import PanamaPark from '../../images/panama-park.jpg';
+import Donate from '../../images/donate.png';
+import Vote from '../../images/vote.png';
+import Park from '../../images/park.png';
+import FundraisingModal from '../../components/FundraisingModal';
 
 const styles = StyleSheet.create({
   banner: {
@@ -81,6 +82,8 @@ const styles = StyleSheet.create({
 });
 
 export default function LandingPage(): JSX.Element {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <div className={css(styles.banner)}>
@@ -88,8 +91,14 @@ export default function LandingPage(): JSX.Element {
           <Row>
             <Col>
               <div className={css(styles.textLeft)}>
-                <h1 className={css(styles.title)}>WE TURN <br/>PUBLIC PARKS <br /><span className={css(styles.bold800)}>PUBLIC</span></h1>
-                <Button variant="success" size="lg">CONTRIBUTE HERE</Button>
+                <h1 className={css(styles.title)}>WE TURN <br/>PRIVATE PARKS <br /><span className={css(styles.bold800)}>PUBLIC</span></h1>
+                <Button
+                  variant="success"
+                  size="lg"
+                  onClick={() => setShowModal(true)}
+                >
+                  CONTRIBUTE HERE
+                </Button>
               </div>
             </Col>
             <Col>
@@ -142,6 +151,8 @@ export default function LandingPage(): JSX.Element {
           <Button size="lg" variant="success">HELP US REACH OUR GOAL</Button>
         </div>
       </div>
+
+      <FundraisingModal show={showModal} handleClose={() => setShowModal(false)} />
     </div>
   );
 }
