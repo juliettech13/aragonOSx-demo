@@ -52,7 +52,56 @@ p {
 }
 
 /* Global Classes */
+
+/* font */
+.bold400 {
+  font-weight: 400;
+}
+
+.bold700 {
+  font-weight: 700;
+}
+
+.bold800 {
+  font-weight: 700;
+}
+
+/* layout  */
+.flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+/* text */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* margin and paddings */
+ padding-top3 {
+   padding-top: 3%;
+ }
+
+ .padding-top5 {
+   padding-top: 5%;
+ }
+
+ .padding-bottom5 {
+   padding-bottom: 5%;
+ }
+
+
+ /* components */
 .green-banner {
-  background-color: #366101;
+  background-color: #DCECE1;
   height: auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
