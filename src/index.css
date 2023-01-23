@@ -51,6 +51,12 @@ p {
   font-weight: 600;
 }
 
+/* Bootstrap override */
+
+.btn {
+  font-weight: 700;
+}
+
 /* Global Classes */
 
 /* font */
@@ -107,11 +113,14 @@ p {
 
 
  /* components */
-.green-banner {
-  background-color: #DCECE1;
+.banner {
   height: auto;
   padding-top: 4%;
   padding-bottom: 4%;
+}
+
+.green-banner {
+  background-color: #DCECE1;
 }
 
 .green-banner-title {
