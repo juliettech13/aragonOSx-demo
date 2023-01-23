@@ -15,10 +15,6 @@ import Park from '../../images/park.png';
 import FundraisingModal from '../../components/FundraisingModal';
 
 const styles = StyleSheet.create({
-  title: {
-    textAlign: 'left',
-    marginBottom: '52px'
-  },
   h2Title: {
     paddingBottom: '4%'
   },
@@ -63,7 +59,7 @@ export default function LandingPage(): JSX.Element {
           <Row>
             <Col>
               <div className="text-left">
-                <h1 className={css(styles.title)}>WE TURN <br/>PRIVATE PARKS <br /><span className="bold800">PUBLIC</span></h1>
+                <h1 className="green-banner-title">WE TURN <br/>PRIVATE PARKS <br /><span className="bold800">PUBLIC</span></h1>
                 <Button
                   variant="success"
                   size="lg"

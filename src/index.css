@@ -63,7 +63,7 @@ p {
 }
 
 .bold800 {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* layout  */
@@ -73,6 +73,14 @@ p {
 
 .flex-direction-column {
   flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.justify-content-end {
+  justify-content: end;
 }
 
 /* text */
@@ -104,4 +112,9 @@ p {
   height: auto;
   padding-top: 4%;
   padding-bottom: 4%;
+}
+
+.green-banner-title {
+  text-align: left;
+  margin-bottom: 52px;
 }
