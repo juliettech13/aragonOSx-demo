@@ -23,10 +23,6 @@ const styles = StyleSheet.create({
     paddingBottom: '10%',
     filter: "drop - shadow(0px 24px 32px rgba(31, 41, 51, 0.04)) drop- shadow(0px 16px 24px rgba(31, 41, 51, 0.04)) drop- shadow(0px 4px 8px rgba(31, 41, 51, 0.04)) drop - shadow(0px 0px 1px rgba(31, 41, 51, 0.04))"
   },
-  // howWeDoThisBanner: {
-  //   height: 'auto',
-  //   padding: '64px'
-  // },
   howWeDoImg: {
     width: '270px',
     height: '220px',

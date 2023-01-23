@@ -6,8 +6,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import {
   getDefaultWallets,
   RainbowKitProvider,
-  darkTheme,
-  midnightTheme
+  darkTheme
 } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, goerli } from 'wagmi/chains';
@@ -27,7 +26,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
+  appName: 'aragonOSx demo',
   chains
 });
 
