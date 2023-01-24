@@ -13,6 +13,7 @@ import Donate from '../../images/donate.png';
 import Vote from '../../images/vote.png';
 import Park from '../../images/park.png';
 import FundraisingModal from '../../components/FundraisingModal';
+import { STRINGS } from '../../strings/english';
 
 const styles = StyleSheet.create({
   h2Title: {
@@ -55,19 +56,19 @@ export default function LandingPage(): JSX.Element {
           <Row>
             <Col>
               <div className="text-left">
-                <h1 className="green-banner-title">WE TURN <br/>PRIVATE PARKS <br /><span className="bold800">PUBLIC</span></h1>
+                <h1 className="green-banner-title">{STRINGS.weTurn} <br/>{STRINGS.privateParks} <br /><span className="bold800">{STRINGS.public}</span></h1>
                 <Button
                   variant="success"
                   size="lg"
                   onClick={() => setShowModal(true)}
                 >
-                  CONTRIBUTE HERE
+                  {STRINGS.contributeHere}
                 </Button>
               </div>
             </Col>
             <Col>
               <div className="text-right">
-                <img src={PanamaPark} alt="Parque Omar, Panamá" className={css(styles.parkImg)}/>
+                <img src={PanamaPark} alt={STRINGS.parkNamePlaceholder} className={css(styles.parkImg)}/>
               </div>
             </Col>
           </Row>
@@ -76,48 +77,48 @@ export default function LandingPage(): JSX.Element {
 
       <div className="banner">
         <div>
-          <h2 className={css(styles.h2Title)}>How do we do this?</h2>
+          <h2 className={css(styles.h2Title)}>{STRINGS.howDoWeDoThis}</h2>
         </div>
         <Container>
           <Row>
             <Col>
               <div className={css(styles.card)}>
-                <img src={Donate} alt="Donate" className={css(styles.howWeDoImg)} />
-                <h3>Contribute</h3>
-                <p className="padding-top5">Contribute ETH to the project and get $PARK tokens in return.</p>
+                <img src={Donate} alt={STRINGS.invest} className={css(styles.howWeDoImg)} />
+                <h3>{STRINGS.contribute}</h3>
+                <p className="padding-top5">{STRINGS.contributeETH}</p>
               </div>
             </Col>
             <Col>
               <div className={css(styles.card)}>
-                <img src={Vote} alt="Vote" className={css(styles.howWeDoImg)} />
-                <h3>Vote</h3>
-                <p className="padding-top5">Select the park we want to collectively purchase and turn public.</p>
+                <img src={Vote} alt={STRINGS.vote} className={css(styles.howWeDoImg)} />
+                <h3>{STRINGS.vote}</h3>
+                <p className="padding-top5">{STRINGS.selectPark}</p>
               </div>
             </Col>
             <Col>
               <div className={css(styles.card)}>
-                <img src={Park} alt="Park" className={css(styles.howWeDoImg)} />
+                <img src={Park} alt={STRINGS.park} className={css(styles.howWeDoImg)} />
                 <h3>Enjoy</h3>
-                <p className="padding-top5">Enjoy a new public park with your friends in your neighborhood!</p>
+                <p className="padding-top5">{STRINGS.enjoyPark}</p>
               </div>
             </Col>
           </Row>
         </Container>
       </div>
 
-      <div className="green-banner flex flex-direction-column">
+      <div className="green-banner banner flex flex-direction-column">
         <div className={css(styles.h2Title)}>
-          <h2><span className="bold800">First park:</span> Coco Park, Panama City</h2>
+          <h2><span className="bold800">{STRINGS.firstPark}:</span> {STRINGS.cocoParque}</h2>
         </div>
         <div className={css(styles.center)}>
           <ProgressBar variant="success" now={60} label="60%" className={css(styles.progressBar)} />
-          <p className="padding-top3 padding-bottom5 bold400">We are 65% along the way. 16 ETH to go 🚀.</p>
+          <p className="padding-top3 padding-bottom5 bold400">{STRINGS.progressUpdate}</p>
           <Button
             size="lg"
             variant="success"
             onClick={() => navigate('create-proposal')}
           >
-            HELP US REACH OUR GOAL
+            {STRINGS.helpUsReachOurGoal}
           </Button>
         </div>
       </div>
