@@ -44,6 +44,13 @@ h3 {
   color: #366101;
 }
 
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #001F5C;
+}
+
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
@@ -55,6 +62,7 @@ p {
 
 .btn {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* Global Classes */
@@ -62,6 +70,10 @@ p {
 /* font */
 .bold400 {
   font-weight: 400;
+}
+
+.bold600 {
+  font-weight: 600;
 }
 
 .bold700 {
@@ -96,6 +108,10 @@ p {
 
 .text-right {
   text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /* margin and paddings */
