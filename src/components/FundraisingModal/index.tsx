@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -13,6 +13,10 @@ interface Params {
 
 export default function FundraisingModal(params: Params): JSX.Element {
   const { show, handleClose } = params;
+
+  async function handleSubmit(event: MouseEvent) {
+    event?.preventDefault();
+  }
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -32,7 +36,11 @@ export default function FundraisingModal(params: Params): JSX.Element {
             </Form.Text>
           </Form.Group>
           <br />
-          <Button variant="success" type="submit">
+          <Button
+            variant="success"
+            type="submit"
+            onClick={(event) => handleSubmit(event)}
+          >
             {STRINGS.contribute}
           </Button>
         </Form>

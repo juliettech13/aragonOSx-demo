@@ -98,7 +98,7 @@ export default function LandingPage(): JSX.Element {
             <Col>
               <div className={css(styles.card)}>
                 <img src={Park} alt={STRINGS.park} className={css(styles.howWeDoImg)} />
-                <h3>Enjoy</h3>
+                <h3>{STRINGS.enjoy}</h3>
                 <p className="padding-top5">{STRINGS.enjoyPark}</p>
               </div>
             </Col>

@@ -6,6 +6,7 @@ export const STRINGS = {
   contribute: 'Contribute',
   contributeETH: 'Contribute ETH to the project and get $PARK tokens in return.',
   contributeHere: 'Contribute here',
+  enjoy: 'Enjoy',
   enjoyPark: 'Enjoy a new public park with your friends in your neighborhood!',
   enterETHAmount: 'Enter the ETH amount',
   firstPark: 'First park',

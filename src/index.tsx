@@ -13,6 +13,8 @@ import { mainnet, goerli } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
+import { AragonSDKWrapper } from './context/aragon-sdk';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
@@ -20,7 +22,7 @@ import './index.css';
 const { chains, provider } = configureChains(
   [mainnet, goerli],
   [
-    alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_GOERLI_KEY || '' }),
+    alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_GOERLI_KEY || '' }),
     publicProvider()
   ]
 );
@@ -52,9 +54,11 @@ root.render(
         })}
         chains={chains}
       >
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <AragonSDKWrapper>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </AragonSDKWrapper>
       </RainbowKitProvider>
     </WagmiConfig>
   </React.StrictMode>
