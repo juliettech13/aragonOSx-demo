@@ -15,11 +15,11 @@ export function AragonSDKWrapper({ children }: any): JSX.Element {
     const aragonSDKContextParams: ContextParams = {
       // TO-DO: add this to .env based on env
       network: 'goerli',
-      signer: signer,
+      signer,
       // TO-DO: add this to .env based on environment
-      daoFactoryAddress: '0x8B4Ca38524fCeCbD5acA39C7cd2f3B762B1d91Bf',
+      daoFactoryAddress: '0x66DBb74f6cADD2486CBFf0b9DF211e3D7961eBf9',
       // TO-DO: add this to .env based on environment
-      web3Providers: [`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_ALCHEMY_GOERLI_KEY}`],
+      web3Providers: ['https://rpc.ankr.com/eth_goerli'],
       ipfsNodes: [
         {
           url: 'https://testing-ipfs-0.aragon.network/api/v0',
@@ -30,8 +30,7 @@ export function AragonSDKWrapper({ children }: any): JSX.Element {
         {
           // which node to use for tutorials?
           url:
-            // 'https://api.thegraph.com/subgraphs/name/aragon/aragon-zaragoza-goerli',
-            'https://subgraph.satsuma-prod.com/aragon/core-goerli/playground'
+            'https://subgraph.satsuma-prod.com/aragon/core-goerli/api'
         },
       ],
     };
