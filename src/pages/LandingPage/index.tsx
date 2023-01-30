@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { useNavigate } from 'react-router-dom';
 
+import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -47,7 +48,10 @@ const styles = StyleSheet.create({
 export default function LandingPage(): JSX.Element {
   const navigate = useNavigate();
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [alertText, setAlertText] = useState<string>('');
+  const [alertVariant, setAlertVariant] = useState<'success' | 'danger'>('success'); // eslint-disable-line @typescript-eslint/no-explicit-any
+  const [showAlert, setShowAlert] = useState<boolean>(false);
 
   return (
     <div>
@@ -72,6 +76,9 @@ export default function LandingPage(): JSX.Element {
               </div>
             </Col>
           </Row>
+          <Alert show={showAlert} variant={alertVariant} onClose={() => setShowAlert(false)} dismissible>
+            {alertText}
+          </Alert>
         </Container>
       </div>
 
@@ -123,7 +130,13 @@ export default function LandingPage(): JSX.Element {
         </div>
       </div>
 
-      <FundraisingModal show={showModal} handleClose={() => setShowModal(false)} />
+      <FundraisingModal
+        setAlertText={setAlertText}
+        setAlertVariant={setAlertVariant}
+        showModal={showModal}
+        setShowAlert={setShowAlert}
+        setShowModal={() => setShowModal(false)}
+      />
     </div>
   );
 }
